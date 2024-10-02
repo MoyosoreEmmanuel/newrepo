@@ -1,21 +1,21 @@
 {
   "hosting": {
     "public": "public",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
+    "rewrites": [
+      {
+        "source": "**",
+        "function": "nextServerFunction"
+      }
     ]
   },
   "functions": {
     "source": "functions",
-    "codebase": "default",
+    "runtime": "nodejs18",
     "ignore": [
       "node_modules",
       ".git",
       "firebase-debug.log",
       "firebase-debug.*.log"
-    ],
-    "runtime": "nodejs18"
+    ]
   }
 }
